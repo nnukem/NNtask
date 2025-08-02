@@ -16,6 +16,9 @@ export const useFetch = <T>(
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    setIsLoading(false);
+    setError(null);
+    setData(null);
     const fetchData = async () => {
       abortController?.abort();
       abortController = new AbortController();
