@@ -5,6 +5,7 @@ import { ActionsCell } from "./components/Table/components/cells/ActionCell";
 import { CurrencyCell } from "./components/Table/components/cells/CurrencyCell/CurrencyCell";
 import styles from "./HomePage.module.scss";
 import pStyles from "../../styles/common/page.module.scss";
+import { ErrorView } from "../../components/ErrorView/ErrorView";
 export const HomePage = () => {
   const { data, isLoading, error } = useFetchTableA();
 
@@ -21,12 +22,7 @@ export const HomePage = () => {
         )}
       </span>
 
-      {error && (
-        <div className={styles.error}>
-          <p>Wystąpił błąd podczas pobierania danych.</p>
-          <p>{error.message}</p>
-        </div>
-      )}
+      <ErrorView error={error} />
       <div className={styles.tableContainer}>
         <Table
           isLoading={isLoading}

@@ -7,6 +7,7 @@ import { useFetchHistory } from "../../service/nbp";
 import { HistoryChart } from "./components/HistoryChart";
 import pStyles from "../../styles/common/page.module.scss";
 import { DateForm } from "./components/DateForm/DateForm";
+import { ErrorView } from "../../components/ErrorView/ErrorView";
 
 export const ChartPage = () => {
   const params = useParams();
@@ -24,6 +25,7 @@ export const ChartPage = () => {
 
   const datapoints = data?.rates || [];
 
+  if (error) return <ErrorView error={error} />;
   return (
     <div className={pStyles.colorContainer}>
       <Link to="/" className={styles.back}>
