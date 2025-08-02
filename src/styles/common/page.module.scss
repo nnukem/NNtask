@@ -1,0 +1,54 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.title {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.5rem;
+
+  @include mixin.tablet {
+    font-size: 1.75rem;
+  }
+  @include mixin.desktop {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  @include mixin.tablet {
+    font-size: 1rem;
+  }
+  @include mixin.desktop {
+    font-size: 1.2rem;
+  }
+}
+
+.colorContainer {
+  height: 100%;
+  border-radius: var(--border-radius-tablet);
+  padding: var(--padding-mobile);
+  background: var(--btn-active-bg);
+
+  @include mixin.tablet {
+    padding: var(--padding-tablet);
+  }
+
+  @include mixin.desktop {
+    padding: var(--padding-desktop);
+  }
+}
+
+.cardContainer {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: var(--padding-mobile);
+  min-height: 24rem;
+
+  @include mixin.tablet {
+    padding: var(--padding-tablet);
+  }
+}

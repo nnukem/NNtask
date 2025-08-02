@@ -1,0 +1,19 @@
+.cellContainer {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.actionBtn {
+  display: block;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+  &:hover {
+    color: var(--accent-color);
+    background-color: var(--btn-active-bg);
+  }
+}

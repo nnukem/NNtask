@@ -1,0 +1,21 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.lastUpdated {
+  display: block;
+  opacity: 0.6;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+
+  @include mixin.tablet {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.table {
+  margin-top: 2rem;
+}
+
+.tableContainer {
+  min-width: 25rem;
+}

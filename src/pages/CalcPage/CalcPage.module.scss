@@ -1,0 +1,9 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.header {
+  margin-bottom: 1.5rem;
+
+  @include mixin.tablet {
+    margin-bottom: 2rem;
+  }
+}

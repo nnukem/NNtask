@@ -1,0 +1,14 @@
+@use "../../../../../../../styles/mixin.scss" as mixin;
+
+.cellContainer {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include mixin.tablet {
+    gap: 0.3rem;
+  }
+}

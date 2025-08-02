@@ -1,0 +1,95 @@
+:root {
+  --primary-color: #213547;
+  --secondary-color: #f9f9f9;
+  --accent-color: #97851f;
+
+  --btn-active-bg: rgba(151, 133, 31, 0.07);
+  --btn-hover-bg: rgba(151, 133, 31, 0.3);
+  --btn-hover-dark-bg: #776918;
+
+  --text-color-light: rgba(255, 255, 255, 0.87);
+  --text-color-dark: #242424;
+  --primary-bg-color: white;
+  --secondary-bg-color: rgb(216, 216, 216);
+  --border-color: #dbdbdb;
+  --error-color: #d9534f;
+
+  --max-width: 1280px;
+
+  --padding-mobile: 1rem;
+  --padding-tablet: 1.5rem;
+  --padding-desktop: 2rem;
+
+  --navbar-height: 4rem;
+  --border-radius-mobile: 0.3rem;
+  --border-radius-tablet: 0.5rem;
+  --border-radius-desktop: 0.8rem;
+
+  --chart-bg-color: rgba(151, 133, 31, 0.05);
+  --chart-tooltip-bg-color: rgba(0, 0, 0, 0.8);
+  --chart-line-color: var(--accent-color);
+
+  --placeholder-color-rgb: 33, 56, 113;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 320px;
+  height: 100%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color-dark);
+  background-color: var(--primary-bg-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*:focus,
+*:focus-visible {
+  outline: 2px solid transparent;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+ol,
+ul,
+menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

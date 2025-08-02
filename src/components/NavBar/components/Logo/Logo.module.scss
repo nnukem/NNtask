@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+
+  .logoIcon {
+    height: 2rem;
+    width: 2rem;
+    color: var(--accent-color);
+  }
+  .logoText {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}

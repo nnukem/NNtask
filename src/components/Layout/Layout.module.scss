@@ -1,0 +1,21 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.layoutMain {
+  display: flex;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-mobile);
+  padding-top: calc(var(--navbar-height) + var(--padding-mobile));
+  flex-direction: column;
+  height: 100%;
+
+  @include mixin.tablet {
+    padding: var(--padding-tablet);
+    padding-top: calc(var(--navbar-height) + var(--padding-tablet));
+  }
+
+  @include mixin.desktop {
+    padding: var(--padding-desktop);
+    padding-top: calc(var(--navbar-height) + var(--padding-desktop));
+  }
+}

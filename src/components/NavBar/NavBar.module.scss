@@ -1,0 +1,33 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.navBar {
+  box-shadow: 0 2px 4px rgba(black, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 100;
+  background-color: var(--primary-bg-color);
+}
+
+.navBarContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0.5rem;
+  align-items: center;
+  max-width: 1280px;
+  padding: 0.5rem var(--padding-mobile);
+
+  @include mixin.tablet {
+    flex-direction: row;
+    margin: 0 auto;
+
+    padding: 1rem var(--padding-tablet);
+  }
+
+  @include mixin.desktop {
+    padding: 1rem var(--padding-desktop);
+  }
+}

@@ -1,0 +1,32 @@
+.table {
+  border-collapse: collapse;
+  border-spacing: 0 12px;
+  width: 100%;
+  table-layout: auto;
+}
+.isScrollable {
+  tbody {
+    display: block;
+    max-height: 25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+    margin: 12px 0;
+  }
+}
+
+.no-records {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--error-color);
+  text-align: center;
+}

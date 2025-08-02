@@ -1,0 +1,27 @@
+@use "../../../../../../styles/mixin.scss" as mixin;
+
+.headRow {
+  padding: 0 12px;
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.headCell {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--btn-active-bg);
+  font-size: 0.75rem;
+
+  &:first-of-type {
+    text-align: left;
+    border-top-left-radius: 0.5rem;
+  }
+  &:last-of-type {
+    text-align: right;
+    border-top-right-radius: 0.5rem;
+  }
+
+  @include mixin.tablet {
+    font-size: 1rem;
+  }
+}

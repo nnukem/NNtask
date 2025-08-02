@@ -1,0 +1,50 @@
+@use "../../../../styles/mixin.scss" as mixin;
+
+.mainNav {
+  display: flex;
+}
+
+.mainNavList {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: var(--text-color-dark);
+  &:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-color);
+  }
+
+  @include mixin.mobile {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.navItemLabel {
+  display: none;
+
+  @include mixin.mobile {
+    display: inline;
+  }
+}
+
+.navItemIcon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.navItemActive {
+  background-color: var(--btn-active-bg);
+  color: var(--accent-color);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}

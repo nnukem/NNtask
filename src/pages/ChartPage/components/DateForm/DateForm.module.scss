@@ -1,0 +1,76 @@
+@use "../../../../styles/mixin.scss" as mixin;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include mixin.tablet {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+
+.inputLabel {
+  display: flex;
+
+  align-items: center;
+  gap: 0.2rem;
+
+  span {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  @include mixin.tablet {
+    width: 100%;
+  }
+}
+
+.mainLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+
+  span {
+    flex-shrink: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+.calendarIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+  flex-shrink: 0;
+}
+
+.inputCont {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--btn-active-bg);
+  }
+
+  @include mixin.tablet {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.dateInput {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+}

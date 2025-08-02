@@ -1,0 +1,20 @@
+@use "../../../../../../styles/mixin.scss" as mixin;
+.tableCell {
+  padding: 1rem;
+  text-overflow: ellipsis;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.75rem;
+
+  &:first-of-type {
+    text-align: left;
+  }
+  &:last-of-type {
+    text-align: right;
+  }
+
+  @include mixin.tablet {
+    font-size: 1rem;
+  }
+}
