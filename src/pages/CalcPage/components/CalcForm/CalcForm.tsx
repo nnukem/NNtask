@@ -61,7 +61,7 @@ export const CalcForm = ({ data, className }: CalcFormProps) => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className={styles.input}
-            placeholder="Enter amount"
+            placeholder="Wpisz kwotę"
           />
         </label>
 
@@ -76,7 +76,7 @@ export const CalcForm = ({ data, className }: CalcFormProps) => {
           <button
             onClick={swapCurrencies}
             className={styles.swapButton}
-            title="Swap currencies"
+            title="Zamień waluty"
           >
             <ArrowRightLeft className={styles.swapIcon} />
           </button>
