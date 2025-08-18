@@ -1,5 +1,3 @@
-"use client";
-
 import { AutoAnimateOptions, AutoAnimationPlugin } from "@formkit/auto-animate";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import classNames from "classnames";

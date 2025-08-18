@@ -28,7 +28,7 @@ export const ChartPage = () => {
   if (error) return <ErrorView error={error} />;
   return (
     <div className={pStyles.colorContainer}>
-      <Link to="/" className={styles.back}>
+      <Link to="/tabela" className={styles.back}>
         <ArrowLeft className={styles.backIcon} />
         <span>Wróć do tabeli kursowej</span>
       </Link>

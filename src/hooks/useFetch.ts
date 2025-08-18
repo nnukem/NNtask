@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type useFetchReturnType<T> = {
   data: T | null;
@@ -11,6 +11,7 @@ export const useFetch = <T>(
   url: string,
   options?: RequestInit
 ): useFetchReturnType<T> => {
+  const abortController = useRef<AbortController>(null);
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
@@ -20,13 +21,13 @@ export const useFetch = <T>(
     setError(null);
     setData(null);
     const fetchData = async () => {
-      abortController?.abort();
-      abortController = new AbortController();
+      abortController.current?.abort();
+      abortController.current = new AbortController();
 
       try {
         const response = await fetch(
           url,
-          Object.assign({ signal: abortController?.signal }, options)
+          Object.assign({ signal: abortController.current?.signal }, options)
         );
         if (!response.ok) {
           setError(new Error(`HTTP error! status: ${response.status}`));
