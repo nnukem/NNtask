@@ -7,7 +7,7 @@ import { ErrorPage } from "./pages/ErrorPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/NNtask"}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route element={<Navigate replace to="/tabela" />} index />
