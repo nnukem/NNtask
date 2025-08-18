@@ -28,7 +28,7 @@ jobs:
          - name: Install dependencies
            run: npm i
          - name: Build
-           run: npm run buiid
+           run: npm run build
          - name: Setup Pages
            uses: actions/configure-pages@v5
          - name: Upload artifact
